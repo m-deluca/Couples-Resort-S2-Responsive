@@ -1,0 +1,50 @@
+/* 
+    CSS Guide 
+
+    1.  General Styles
+    2.  Main Nav
+    3.  Main Hero Image
+    4.  Main Hero Image Contact
+    5.  Why Couples Resort
+    6.  About & FAQ
+    7.  Contact Form
+    8.  Footer
+    9.  Custom Queries
+    10. Tablet Queries
+    11. Desktop Queries 
+ */
+
+
+ /* 1. ---General Styles--- */
+
+body {
+   color: #626262;
+   font-family: 'Sanchez', 'Times New Roman', serif;
+}
+
+a {
+   text-decoration: none;
+   transition: all .5s ease-in-out;
+}
+
+input, textarea {
+   display: block;
+   margin: 0;
+   padding: 0;
+}
+
+.cr-red {
+   color: #9a2018;
+}
+
+/* 2. ---Main Nav--- */
+
+#main-nav button {
+   background: url(../images/burger.svg) center no-repeat;
+   border: 0px;
+   width: 20px;
+   height: 20px;
+   margin-top: 15px;
+   margin-bottom: 20px;
+   transition: all .5s ease;
+}
