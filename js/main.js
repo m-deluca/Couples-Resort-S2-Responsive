@@ -1,6 +1,5 @@
 (function(){
-	"use strict";
-	
+	"use strict";	
 	console.log("fired");
 
 	let button = document.querySelector("#button");
@@ -16,8 +15,7 @@
 	// 	button.classList.toggle("expanded");
 	// };
 
-	button.addEventListener("click", hamburgerMenu, false);
-		
+	button.addEventListener("click", hamburgerMenu, false);		
 })();
 
 //Can also be written like this:

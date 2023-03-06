@@ -48,3 +48,96 @@ input, textarea {
    margin-bottom: 20px;
    transition: all .5s ease;
 }
+
+#main-nav ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+#main-nav ul li a {
+   display: block;
+   padding: 10px 0 10px 0;
+   text-align: center;
+   color: #626262;
+}
+
+#main-nav ul li a:hover {
+   color: #9a2018;
+}
+
+#main-nav ul li {
+   border-bottom: 1px solid #efefefef;
+}
+
+#main-nav ul li:first-child {
+   border-top: 1px solid #efefefef;
+}
+
+#main-nav ul li:last-child {
+   margin-bottom: 10px;
+}
+
+#burger-con {
+   margin-top: 20px;
+   display: none;
+}
+
+#burger-con.slide-toggle {
+   display: block;
+}
+
+#main-nav button.expanded {
+   transform: rotate(90deg);
+}
+
+/* this will appear at desktop */
+#book-now-header {
+   display: none;
+}
+
+#logo {
+   max-width: 228px;
+   margin-bottom: 20px;
+}
+
+/* 3. ---Main Hero Image--- */
+
+#hero img {
+   grid-column: 1/-1;
+   grid-row: 1/1;
+   justify-self: center;
+}
+
+#hero-main {
+   height: 220px;
+   object-fit: cover;
+}
+
+#hero .grid-con {
+   /* Telling this grid to live in the middle column */
+   grid-column: 2/3;
+   /* also telling it stay in the first row, so it overlaps the hero image */
+   grid-row:1/1;
+   /* get rid of margin 0 auto from the original class */
+   margin: 0;
+}
+
+.book-now {
+   background-color: #9a2018;
+   color: #fff;
+   font-size: 16px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-style: italic;
+   transition: all 0.3s ease;
+}
+
+.book-now:hover {
+   box-shadow: inset 0px -67px 0px rgb(196, 28, 28);
+}
+
+#book-now-hero {
+   height: 67px;
+}
