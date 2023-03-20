@@ -161,10 +161,112 @@ input, textarea {
    align-self: end;
 }
 
+.line-seperator {
+   margin-top: 20px;
+   border-top: solid 3px #CF6666;
+   padding-top: 20px;
+}
+
+#hero-summary p {
+   font-size: 14px;
+   line-height: 22px;
+   margin-bottom: 20px;
+}
+
+/* 4. ---Main Hero Image Contact--- */
+
+.fas {
+   font-size: 50px;
+   color: #9a2018;
+   float: left;
+   /* margin: 0 auto; */
+}
+
+.fa-mobile-alt {
+   margin-right: 20px;
+   margin-left: 3px;
+   margin-bottom: 20px;
+}
+
+.fa-map-marker-alt {
+   margin-right: 15px;
+}
+
+#contact {
+   font-size: 12px;
+   background-color: #efefef;
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+#contact .grid-con > div {
+   width: 240px;
+   margin: 0 auto;
+}
+
+#why-choose-us-nav {
+   padding-top: 20px;
+}
+
+#why-choose-us-nav ul {
+   list-style: none;
+   margin: 0px;
+   padding: 0px;
+}
+
+#why-choose-us-nav ul li {
+   margin-bottom: 15px;
+}
+
+#why-choose-us-nav ul li a {
+   color:#9a2018;
+   padding: 5px;
+}
+
+#why-choose-us-nav ul li a.selected {
+   border-left: #9a2018 solid 5px;
+}
+
+#why-choose-us-hero-con img {
+   /* stretch across all 3 columns */
+   grid-column: 1/-1;
+   /* stay in first row to allow for overlap */
+   grid-row: 1/1;
+   justify-self: center;
+}
+
+#why-choose-us-hero {
+   height: 195px;
+   object-fit: cover;
+   object-position: 30%;
+}
+
+#why-choose-us-hero-con .grid-con {
+   /* sit in the middle of the 3 column grid */
+   grid-column: 2/3;
+   /* stay in the top row, so it overalps the image */
+   grid-row: 1/1;
+   /* get rid of any margin from original .grid-con class */
+   margin: 0;
+}
+
+#why-choose-us-heading-box {
+   align-self: end;
+}
+
+
 
 /* 10. ---Tablet Sized Screens--- */
 
 @media screen and (min-width: 768px) {
+
+   #sticky-nav-con {
+      position: sticky;
+      top: 0px;
+      background-color: #fff;
+      border-bottom: solid 1px #c3c3c3;
+   }
+
    #logo {
       margin-top: 32px;
       order: -1;
@@ -266,6 +368,43 @@ input, textarea {
    .hero-img span, .hero-img-h3 span {
       font-size: 14px;
    }
+
+   .fas {
+      font-size: 60px;
+   }
+
+   #contact {
+      line-height: 22px;
+      height: 214px;
+      padding-top: 60px;
+      font-size: 11px;
+   }
+
+   #contact .grid-con > div {
+      width: auto;
+      margin: 0;
+   }
+
+   #why-choose-us-nav {
+      margin-top: 30px;
+      margin-bottom: 30px;
+   }
+
+   #why-choose-us-nav ul li {
+      display: inline;
+      margin-right: 30px;
+   }
+
+   #why-choose-us-nav ul li a.selected {
+      border-left: none;
+      border-bottom: 5px solid #9a2018;
+      padding-bottom: 25px;
+   }
+
+   #why-choose-us-hero {
+      height: 240px;
+   }
+
 }
 
 /* 11. ---Desktop Sized Screens--- */
@@ -312,6 +451,18 @@ input, textarea {
 
    #hero-main {
       object-position: 15%;
+   }
+
+   .fas {
+      font-size: 90px;
+   }
+
+   .fa-mobile-alt, .fa-map-marker-alt {
+      margin-right: 40px;
+   }
+
+   #why-choose-us-hero {
+      height: 380px;
    }
 }
 
