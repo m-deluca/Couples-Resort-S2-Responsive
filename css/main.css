@@ -40,13 +40,27 @@ input, textarea {
 /* 2. ---Main Nav--- */
 
 #main-nav button {
-   background: url(../images/burger.svg) center no-repeat;
-   border: 0px;
    width: 20px;
    height: 20px;
+   background: url(../images/burger.svg) no-repeat center;
    margin-top: 15px;
    margin-bottom: 20px;
    transition: all .5s ease;
+   border: 0;
+}
+
+#main-nav button.expanded {
+   transform: rotate(90deg);
+}
+
+#burger-con {
+   margin-top: 20px;
+   margin-bottom: 20px;
+   display: none;
+}
+
+#burger-con.slide-toggle {
+   display: block;
 }
 
 #main-nav ul {
@@ -67,37 +81,38 @@ input, textarea {
 }
 
 #main-nav ul li {
-   border-bottom: 1px solid #efefefef;
+   border-bottom: 1px solid #efefef;
 }
 
 #main-nav ul li:first-child {
-   border-top: 1px solid #efefefef;
+   border-top: 1px solid #efefef;
 }
 
 #main-nav ul li:last-child {
    margin-bottom: 10px;
 }
 
-#burger-con {
-   margin-top: 20px;
-   display: none;
+.book-now {
+   background-color: #9a2018;
+   color: #fff;
+   font-size: 16px;
+   font-style: italic;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all 0.3s ease-in-out;
 }
 
-#burger-con.slide-toggle {
-   display: block;
+.book-now:hover {
+   box-shadow: inset 0px -120px 0px rgb(196, 28, 28);
 }
 
-#main-nav button.expanded {
-   transform: rotate(90deg);
-}
-
-/* this will appear at desktop */
 #book-now-header {
    display: none;
 }
 
 #logo {
-   max-width: 228px;
+   max-width: 288px;
    margin-bottom: 20px;
 }
 
@@ -254,6 +269,283 @@ input, textarea {
    align-self: end;
 }
 
+.why-choose-us-image {
+   float: left;
+   margin-right: 20px;
+   margin-top: 30px;
+}
+
+.why-choose-us-image span{
+   display: none;
+}
+
+
+.why-choose-us-image-con h2 {
+   font-size: 14px;
+   margin-bottom: 20px;
+   margin-top: 30px;
+}
+
+.why-choose-us-image-con p {
+   font-size: 12px;
+   margin-bottom: 20px;
+   line-height: 20px;
+}
+
+.why-choose-us-image-con a {
+   color: #707070;
+   font-size: 12px;
+}
+
+.show-hide {
+   display: none;
+}
+
+#why-choose-us-bottom-nav {
+   background-color: #CF6666;
+   padding: 10px;
+   margin-top: 20px;
+   margin-bottom: 30px;
+}
+
+#why-choose-us-bottom-nav ol {
+   list-style-type: none;
+   margin: 0 0 0 20px;
+   padding: 0;
+}
+
+#why-choose-us-bottom-nav ol li {
+   display: inline;
+}
+
+#why-choose-us-bottom-nav ol li a {
+   padding: 5px;
+   color: #fff;
+}
+
+/* 6. ---About & FAQ--- */
+
+#about-hero-con img {
+   /* stretch the image across the entire grid */
+   grid-column: 1/-1;
+   /* set the image to live in the first row */
+	grid-row:1/1;
+   justify-self: center;
+}
+
+#about-hero-con .grid-con {
+    /* tell other grid to live in middle column */
+    grid-column: 2/3;
+    /* also tell it to stay in first rown instead of another row below
+    to allow overlap to happen */
+    grid-row:1/1;	
+    /* get rid of margin 0 auto from original class */
+    margin: 0;
+}
+
+#about-hero {
+   object-fit: cover;
+   /* First value controls the x-axis and the second value controls the y-axis,Default value:	50% 50% */
+   object-position: right;
+   height: 195px;
+}
+
+#about-hero-heading-box {
+   align-self: end;
+}
+
+#about-us-text {
+   padding-bottom: 60px;
+}
+
+#about-us-text p {
+   font-size: 14px;
+   margin-bottom: 20px;
+   line-height: 22px;
+}
+
+#about-us-text-column2 {
+   font-style: italic;
+}
+
+#faq-con {
+   background-color: #f4f4f4;
+   padding-top: 35px;
+   padding-bottom: 30px;
+}
+
+.faq h2 {
+   font-size: 24px;
+   margin-bottom: 20px;
+}
+
+.faq h2 span {
+   color: #9a2018;
+   font-size: 16px;
+}
+
+.faq-items {
+   margin-bottom: 16px;
+}
+
+.faq-items h3 {
+   background: #e8e7e7;
+   padding: 16px;
+   font-size: 16px;
+}
+
+.faq-items ul {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+}
+
+.faq-items li {
+   padding: 8px 0;
+   border-bottom: 1px solid #9a2018;
+}   
+
+.faq-items a {
+   color: inherit;
+   font-size: 13px;
+}
+
+#faq-text-con {
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+/* 7. ---Contact--- */
+
+#contact-hero-con img {
+   /* stretch the image across the entire grid */
+   grid-column: 1/-1;
+   /* set the image to live in the first row */
+	grid-row:1/1;
+   justify-self: center;
+}
+
+#contact-hero-con .grid-con {
+    /* tell other grid to live in middle column */
+    grid-column: 2/3;
+    /* also tell it to stay in first rown instead of another row below
+    to allow overlap to happen */
+    grid-row:1/1;	
+    /* get rid of margin 0 auto from original class */
+    margin: 0;
+}
+
+#contact-hero {
+   object-fit: cover;
+   /* First value controls the x-axis and the second value controls the y-axis,Default value:	50% 50% */
+   object-position: center;
+   height: 195px;
+}
+
+#contact-hero-heading-box {
+   align-self: end;
+}
+
+#contact-hero-text {
+   margin-top: 15px;
+   margin-bottom: 25px;
+}
+
+#contact-hero-address p {
+   margin-bottom: 20px;
+   font-size: 14px;
+   line-height: 22px;
+}
+
+#contact-hero-address {
+   margin-bottom: 30px;
+}
+
+#contact-hero-address h3 {
+   margin-bottom: 25px;
+}
+
+#contact-hero-form form {
+   display: flex;
+   flex-direction: column;
+}
+
+#contact-hero-form input, textarea {
+   padding: 22px;
+   border: 2px solid #d6d6d6;
+   background-color: #f7f7f7;
+   border-radius: 5px;
+   margin-bottom: 30px;
+   font: inherit;
+   width: 100%;
+}
+
+#contact-hero-form textarea {
+   height: 250px;
+}
+
+#contact-hero-form input[type="submit"] {
+   padding: 12px 28px;
+   background: #9a2018;
+   color: #fff;
+   border: none;
+   transition: all 200ms ease-in;
+   width: 150px;
+   align-self: flex-end;
+}
+
+#contact-hero-form input[type="submit"]:hover {
+   background-color: #626262;
+   border-radius: 0;
+}
+
+/* 8. ---Footer--- */
+
+#footer-hero {
+   background-image: url(../images/footer-mt.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+   background-position: center;
+   color: #fff;
+   font-size: 12px;
+   margin-top: 40px;
+   padding-bottom: 80px;
+}
+
+/*image switching for retina screens*/
+
+@media screen and (min-resolution: 200dpi),
+		screen and (min-resolution: 1.25dppx) {
+   #footer-hero {
+		background-image: url(../images/footer-mt@2x.jpg);
+	}		
+}
+
+#footer-hero h3 {
+   margin-top: 30px;
+   font-size: 28px;
+   margin-bottom: 16px;
+}
+
+#footer-privacy .line-seperator {
+   margin-top: 0px;
+}
+
+#footer-contact-info h3 {
+   font-size: 23px;
+}
+
+#footer-contact-info p {
+   margin-bottom: 20px;
+   line-height: 18px;
+   font-size: 11px;
+}
+
+#footer-nav, #footer-book-now {
+   display: none;
+}
+
+
 
 
 /* 10. ---Tablet Sized Screens--- */
@@ -265,6 +557,7 @@ input, textarea {
       top: 0px;
       background-color: #fff;
       border-bottom: solid 1px #c3c3c3;
+      z-index: 1;
    }
 
    #logo {
@@ -405,6 +698,153 @@ input, textarea {
       height: 240px;
    }
 
+   .why-choose-us-image {
+      float: none;
+      margin-right: 0px;
+      margin-top: 0px;
+      position: relative;
+   }
+
+   .why-choose-us-image span{
+      display: block;
+      position: absolute;
+      bottom: 30px;
+      right: 0px;
+      color: #fff;
+      font-size: 88px;
+   }
+
+   .why-choose-us-image-con h2 {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 10px;
+   }
+
+   .why-choose-us-image-con h3 {
+      font-size: 16px;
+      margin-bottom: 20px;
+   }
+
+   .why-choose-us-image img {
+      filter: grayscale(100%);
+      z-index: -1;
+      /* set z-index lower so images don't overlap the nav
+      applying filters affects the browser painting order */
+      display: block;
+      /* the images were not fully filling the grid boxes, until I set them to block */
+   }
+
+   .why-choose-us-image-con {
+      margin-bottom: 30px;
+   }
+
+   #hot-tub p, #hot-tub a, #hot-tub h2 {
+      display: none;
+   }
+
+   #spa {
+      background-color: #626262;
+      color: #fff;
+      padding: 20px;
+   }
+
+   #spa p {
+      /* not supported in all browsers */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;  
+      text-overflow: ellipsis;
+      overflow: hidden;
+   }
+
+   #spa a {
+      color: #fff;
+      padding-bottom: 5px;
+   }
+
+   #spa a:hover {
+      border-bottom: solid 3px #9a2018;
+   }
+
+   #why-choose-us-bottom-nav {
+      display: none;
+   }
+
+   #why-choose-us {
+      margin-bottom: 80px;
+   }
+
+   .show-hide {
+      display: block;
+   }
+
+   #about-hero {
+      height: 240px;
+   }
+
+   #about-us-text {
+      column-count: 2;
+   }
+
+   #about-us-text-column1 {
+      margin-bottom: 80px;
+   }
+
+   #contact-hero {
+      height: 240px;
+   }
+   #contact-hero-text {
+      padding-top: 50px;
+      margin-top: 20px;
+   }
+
+   #faq-text-con  {
+      column-count: 2;
+      text-align: left;
+   }
+
+   #footer-nav {
+      display: block;
+   }
+
+   #footer-book-now {
+      display: flex;
+      height: 80px;
+      margin-top: 40px;
+   }
+
+   #footer-hero {
+      background-image: url(../images/footer-td.jpg);
+   }
+   
+   /*image switching for retina screens*/
+   
+   @media screen and (min-resolution: 200dpi),
+         screen and (min-resolution: 1.25dppx) {
+      #footer-hero {
+         background-image: url(../images/footer-td@2x.jpg);
+      }		  
+   }
+
+   #footer-nav {
+      margin-top: 40px;
+      column-count: 2;
+   }
+
+   #footer-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+
+   #footer-nav ul li a {
+      color: #fff;
+   }
+
+   #footer-nav ul li {
+      margin-bottom: 20px;
+   }   
+
 }
 
 /* 11. ---Desktop Sized Screens--- */
@@ -462,6 +902,27 @@ input, textarea {
    }
 
    #why-choose-us-hero {
+      height: 380px;
+   }
+
+   #spa p {
+      display: block;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
+      text-overflow: unset;
+      overflow: auto;
+   }
+
+   #why-choose-us-nav {
+      margin-top: 50px;
+      font-size: 24px;
+   }
+
+   #about-hero {
+      height: 380px;
+   }
+
+   #contact-hero {
       height: 380px;
    }
 }
